@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .work-we-do-grid-item{
+      padding: 25px;
+    }
+    
+    .flip-box {
+      background-color: transparent;
+      height: 500px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px;
+      padding: 10px;
+      border: 1px solid palegreen;
+    }
+    
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      margin-top: 10%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .flip-box-front {
+      background-color: cyan;
+      color: black;
+    }
+    
+    .flip-box-back {
+      background-color: gold;
+      color: white;
+      transform: rotateY(180deg);
+    }
+    .flipP{
+      padding:7% 5% 0% 5%;
+    }
+    </style>
+</head>
+<body style="background-color: black;">
+  <div style="display:flex; padding: 1%;">
+    <img src="images/disneyLogo.png" style="width: 50px; height: 50px; margin-left: 2%;">
+    <h1 style="margin:auto;">Website Name</h1>
+  </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Home</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Adoption</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:400px; height: 400px; margin: auto;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/lion.jpg" alt="Los Angeles" style="width:400px; height: 400px;">
+      </div>
+
+      <div class="item">
+        <img src="images/elephant.png" alt="Chicago" style="width:400px; height: 400px;">
+      </div>
+    
+      <div class="item">
+        <img src="images/giraffe.png" alt="New york" style="width:400px; height: 400px;">
+      </div>
+      
+      <div class="item">
+        <img src="images/unidolphin.jpg" alt="New york" style="width:400px; height: 400px;">
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
+  
+
+  <div class="row">
+    <div class="col-sm-6" style="background-color: tomato; margin-top: 5%;">
+      <img src="images/groupPhoto.jpg" width="100%" alt="New york" style="padding: auto;">
+    </div>
+    <div class="col-sm-6" style="background-color: turquoise; padding: 3%; margin-top: 5%;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nihil qui eos vero, amet repellat voluptatum numquam, laudantium mollitia expedita, quo voluptas minima laboriosam quia vitae a iste quis unde?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi accusamus vel? Blanditiis repellat laborum ex perferendis distinctio cupiditate in adipisci delectus, iusto assumenda fugiat minima quibusdam dicta architecto quidem.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo deleniti iusto, ullam ipsum mollitia tempore, libero quisquam fugiat at magnam laborum suscipit, adipisci ducimus totam impedit expedita repellat quis! Exercitationem?
+        
+      </p>
+    </div>
+  </div>
+
+
+  <div class="work-we-do">
+    <h1 style="text-align: center; margin-top: 10%;">Work We Do</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nihil qui eos vero, amet repellat voluptatum numquam, laudantium mollitia expedita, quo voluptas minima laboriosam quia vitae a iste quis unde?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi accusamus vel? Blanditiis repellat laborum ex perferendis distinctio cupiditate in adipisci delectus, iusto assumenda fugiat minima quibusdam dicta architecto quidem.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo deleniti iusto, ullam ipsum mollitia tempore, libero quisquam fugiat at magnam laborum suscipit, adipisci ducimus totam impedit expedita repellat quis! Exercitationem?
+      
+    </p>
+    <div class="work-we-do-grid">
+      <div class="work-we-do-grid-item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/elephant1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/elephant.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+
+      <div class="work-we-do-grid-item col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/lion1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/lion.jpg" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+
+      <div class="work-we-do-grid-item col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/elephant1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/elephant.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+
+      <div class="work-we-do-grid-item col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/lion1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/lion.jpg" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+      <div class="work-we-do-grid-item col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/elephant1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/elephant.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+      <div class="work-we-do-grid-item col-sm-6 col-md-6 col-lg-4">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="images/lion1.png" alt="Paris" style="width:200px;height:200px">
+            </div>
+            <div class="flip-box-back">
+              <img src="images/lion.jpg" alt="Paris" style="width:200px;height:200px">
+            </div>
+          </div>
+          <p class="flipP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iure exercitationem minus, magni ipsam deleniti recusandae dolore temporibus beatae, soluta et sunt! Nemo perferendis eveniet distinctio. Vel molestiae modi fugiat?  
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+
+
+
+
+
+  <!---------------------------------------------------------------------------------->
+
+    
+  <!---------------------------------------------------------------------------------->
+
+  
+</div>
+<div class="footer" style="width: 100%; height: 200px;">
+  
+</div>
+</body>
+</html>
